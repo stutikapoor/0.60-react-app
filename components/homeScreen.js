@@ -38,6 +38,7 @@ class homeScreen extends Component {
                         <Image style={styles.img} source={require('../assets/d.jpg')} />
                         <Button style={styles.btnTest} title="click me" onPress={() => this.goto()} />
                     </View>
+                    
                 </View>
 
             </View>

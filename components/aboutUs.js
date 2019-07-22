@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View,StyleSheet,TouchableOpacity } from 'react-native'
+import { Text, View,StyleSheet,TouchableOpacity, Image } from 'react-native'
 
 export class aboutUs extends Component {
     render() {
@@ -21,14 +21,69 @@ export class aboutUs extends Component {
                         </Text>
                     </View>
                 </View>
+                <View style={styles.Tile}>
              
-                <Text> aboutUs Component </Text>
+             
+             
+              <View>
+            <Image source={require('../assets/d.jpg')} style={styles.TileImg}/>
+            </View>
+            <Text style={styles.TileHead}>Hello There Im The Google Earth</Text>
+            </View>
+            
+
+            
             </View>
         )
     }
 }
 
 const styles = StyleSheet.create({
+    
+Tile: {
+    height:400,
+    width:'90%',
+    backgroundColor:'black',
+    alignSelf:'center',
+    marginTop:'5%',
+    borderRadius:20,
+    backgroundColor:'#0d162e',
+    elevation:15
+  },
+  
+  TileImg: {
+    height:'90%',
+    width:'100%',
+    resizeMode:'cover',
+    borderRadius:20,
+    
+  },
+  TileHead: {
+    color:'white',
+    fontFamily:'Montserrat-Bold',
+    fontSize:20,
+    textAlign:'center',
+    position:'relative',
+    top:'-2%'
+  },
+  TileText: {
+    color:'white',
+    fontFamily:'Montserrat-Regular',
+    textAlign:'center',
+    top:'-1%'
+  },
+    inner:{
+        height:50,
+    },
+    img:{
+        height:80,
+    },
+    container:{
+        height:100,
+        borderRadius:20,
+        borderColor:"#fff",
+        borderWidth:1,
+    },
     logoText: {
         marginRight: 10,
         //   width:"75%",
