@@ -34,10 +34,12 @@ import homeScreen from './components/homeScreen';
 import detailsScreen from './components/detailsScreen';
 import aboutUs from "./components/aboutUs";
 import details from "./components/details";
+import event from './components/event';
 
 export const RootStack = createDrawerNavigator(
   {
       homeScreen:homeScreen,
+      Event:event,
       detailsScreen:detailsScreen,
       AboutUs:aboutUs,
       DetailsCompany:details,

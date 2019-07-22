@@ -1,20 +1,11 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet, TouchableOpacity, Button, Image } from 'react-native'
+import { Text, View,StyleSheet,TouchableOpacity } from 'react-native'
 
-
-class homeScreen extends Component {
-    constructor(props) {
-        super(props);
-        // this.goto = this.goto.bind(this)
-    }
-    goto() {
-        this.props.navigation.navigate('AboutUs');
-    }
-
+export class event extends Component {
     render() {
         return (
             <View>
-                <View style={styles.header}>
+             <View style={styles.header}>
                     <TouchableOpacity style={styles.hamburger} onPress={() => this.props.navigation.toggleDrawer()}>
                         <View style={styles.hamburgerOdd} ></View>
                         <View style={styles.hamburgerEven} ></View>
@@ -28,36 +19,16 @@ class homeScreen extends Component {
                         <Text style={styles.logoText}>
                             TestAPP
                         </Text>
-                        <Image style={styles.logo} source={require('../assets/d.jpg')} />
                     </View>
                 </View>
-                <View>
-                    <Text style={{ color: '#fff' }}>This is HomeScreen</Text>
-                    {/* <TouchableOpacity><Text>test</Text></TouchableOpacity> */}
-                    <View>
-                        <Image style={styles.img} source={require('../assets/d.jpg')} />
-                        <Button style={styles.btnTest} title="click me" onPress={() => this.goto()} />
-                    </View>
-                </View>
-
+             
+                <Text> Event Component </Text>
             </View>
-
         )
     }
 }
 
 const styles = StyleSheet.create({
-    logo: {
-        height: 50,
-        width: 50
-    },
-    img: {
-        alignSelf: 'center'
-    },
-    btnTest: {
-        width: 100,
-        height: 100
-    },
     logoText: {
         marginRight: 10,
         //   width:"75%",
@@ -107,4 +78,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default homeScreen
+export default event
