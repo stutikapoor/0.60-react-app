@@ -32,27 +32,27 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import homeScreen from './components/homeScreen';
 import detailsScreen from './components/detailsScreen';
+import aboutUs from "./components/aboutUs";
+import details from "./components/details";
 
 export const RootStack = createDrawerNavigator(
   {
       homeScreen:homeScreen,
-      detailsScreen:detailsScreen
+      detailsScreen:detailsScreen,
+      AboutUs:aboutUs,
+      DetailsCompany:details,
   },
   {
       initialRouteName: "homeScreen",
       activeTintColor: "#fff",
       drawerBackgroundColor: "red",
       flex: 1,
-
       contentOptions: {
           activeTintColor: "white",
-          inactiveTintColor: "green",
-          
+          inactiveTintColor: "green",         
       }
   }
 )
-
-
 const AppContainer = createAppContainer(RootStack);
 export default class App extends Component {
   render(){
@@ -63,6 +63,5 @@ export default class App extends Component {
       
   );
   }
-  
 };
 

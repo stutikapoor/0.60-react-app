@@ -1,17 +1,11 @@
 import React, { Component } from 'react'
-import {View,Text,StyleSheet,TouchableOpacity,Button} from 'react-native'
+import { Text, View,StyleSheet,TouchableOpacity } from 'react-native'
 
-
- class homeScreen extends Component {
-    constructor(props){
-        super(props);
-        }
-    
-    
+export class aboutUs extends Component {
     render() {
         return (
             <View>
-                <View style={styles.header}>
+             <View style={styles.header}>
                     <TouchableOpacity style={styles.hamburger} onPress={() => this.props.navigation.toggleDrawer()}>
                         <View style={styles.hamburgerOdd} ></View>
                         <View style={styles.hamburgerEven} ></View>
@@ -27,10 +21,9 @@ import {View,Text,StyleSheet,TouchableOpacity,Button} from 'react-native'
                         </Text>
                     </View>
                 </View>
-                <Text style={{color:'#fff'}}>This is HomeScreen</Text>
-                <TouchableOpacity><Text>test</Text></TouchableOpacity>
-                </View>
-
+             
+                <Text> aboutUs Component </Text>
+            </View>
         )
     }
 }
@@ -85,4 +78,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default homeScreen
+export default aboutUs
