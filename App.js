@@ -30,36 +30,46 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import homeScreen from './components/homeScreen';
-import detailsScreen from './components/detailsScreen';
+import home from './components/home';
 import aboutUs from "./components/aboutUs";
-import details from "./components/details";
-import event from './components/event';
+import contributeto from "./components/contributeto";
+import contributions from './components/contributions';
+import services from "./components/services";
+import gallery from "./components/gallery";
+import contact from "./components/contact";
+import Certificate, { certificate } from "./components/certificate";
+
 
 export const RootStack = createDrawerNavigator(
   {
-      homeScreen:homeScreen,
-      Event:event,
-      detailsScreen:detailsScreen,
+      Home:home,
       AboutUs:aboutUs,
-      DetailsCompany:details,
+      ContributeTo:contributeto,
+      Contributions:contributions,
+      Services:services,
+      Gallery:gallery,
+      Contact:contact, 
+      
   },
+
   {
-      initialRouteName: "homeScreen",
+      initialRouteName: "Home",
       activeTintColor: "#fff",
-      drawerBackgroundColor: "red",
+      drawerBackgroundColor: "golden",
       flex: 1,
       contentOptions: {
           activeTintColor: "white",
-          inactiveTintColor: "green",         
+          inactiveTintColor: "orange",         
       }
   }
 )
+
+
 const AppContainer = createAppContainer(RootStack);
 export default class App extends Component {
   render(){
     return (
-      <View style={{backgroundColor:'blue',height:'100%',width:'100%'}}>
+      <View style={{backgroundColor:'black',height:'100%',width:'100%'}}>
         <AppContainer/>
       </View>
       
